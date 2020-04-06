@@ -35,18 +35,22 @@ class AddNotesViewController: UIViewController, UIImagePickerControllerDelegate,
         let trashBarButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(selectedTrash))
         let shareButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(selectedShare))
         let photosBarButton = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(selectedCamera))
-        
+        let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissKeyboard))
         let addNotesBarButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addNotes))
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         toolbarItems = [trashBarButton, spacer, shareButton, spacer, photosBarButton, spacer, addNotesBarButton]
+        
         self.navigationController?.setToolbarHidden(false, animated: false)
         
         let toolbar = UIToolbar(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         toolbar.barStyle = .default
-        toolbar.items = toolbarItems
+        toolbar.items = [trashBarButton, spacer, shareButton, spacer, doneBarButton]
         toolbar.sizeToFit()
         notesTextView.inputAccessoryView = toolbar
-
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
     
     @objc func addNotes() {
@@ -60,7 +64,6 @@ class AddNotesViewController: UIViewController, UIImagePickerControllerDelegate,
         let text = notesTextView.text ?? ""
         let activityVC = UIActivityViewController(activityItems: [text], applicationActivities: nil)
         self.present(activityVC, animated: true, completion: nil)
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -78,10 +81,3 @@ class AddNotesViewController: UIViewController, UIImagePickerControllerDelegate,
         // Handle Camera action
     }
 }
-
-extension AddNotesViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        scrollView.contentOffset.x = 0
-    }
-}
-
