@@ -21,7 +21,7 @@ struct FolderListViewModal {
     func updateFolderDB() {
         guard let email = user?.email else { return }
         let count = String(describing: self.folders.count)
-        let db = Firestore.firestore().collection(Constants.folders)
+        let db = Firestore.firestore().collection(FolderListViewModal.baseurl(email: email))
         db.document(count).setData([
             Constants.folderName: folderName,
             Constants.userID: email,
@@ -33,7 +33,7 @@ struct FolderListViewModal {
     }
     
     func addFolderChangeListioner(completion: @escaping ([Folder])->Void) {
-        let db = Firestore.firestore().collection(Constants.folders)
+        let db = Firestore.firestore().collection(FolderListViewModal.baseurl(email: user?.email))
         db.addSnapshotListener { (snapshot, error) in
             guard let documents = snapshot?.documents else { return }
             var folders = [Folder]()
@@ -49,18 +49,18 @@ struct FolderListViewModal {
     
     func deleteFolder(folder: Folder?) {
         guard let folder = folder else { return }
-        let folderDatabase = Firestore.firestore().collection("folders")
+        let folderDatabase = Firestore.firestore().collection(FolderListViewModal.baseurl(email: user?.email))
         folderDatabase.document(folder.folderID).delete() { error in
             guard error == nil else { return }
         }
     }
     
     func deleteNotesInsideFolder(folder: Folder?) {
-        let db = Firestore.firestore().collection(AddNewNoteViewModal.path(folderId: folder?.folderID))
+        let db = Firestore.firestore().collection(AddNewNoteViewModal.path(userID: user?.email, folderId: folder?.folderID))
         db.getDocuments { (snapshot, error) in
             guard error == nil, let documents = snapshot?.documents else { return }
             documents.forEach({ (document) in
-                Firestore.firestore().collection(AddNewNoteViewModal.path(folderId: folder?.folderID)).document(document.documentID).delete() { error in
+                Firestore.firestore().collection(AddNewNoteViewModal.path(userID: self.user?.email, folderId: folder?.folderID)).document(document.documentID).delete() { error in
                     guard error == nil else { return }
                 }
             })
@@ -73,6 +73,10 @@ struct FolderListViewModal {
         } catch let error {
             print(error)
         }
+    }
+    
+    static func baseurl(email: String?) -> String {
+        return "users/" + (email ?? "") + "/" + Constants.folders
     }
 }
 

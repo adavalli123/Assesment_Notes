@@ -17,7 +17,7 @@ struct NotesListViewModal {
     var folder: Folder?
     
     func addNoteChangeListioner(completion: @escaping ([Note]) -> Void) {
-        let db = Firestore.firestore().collection(AddNewNoteViewModal.path(folderId: folder?.folderID))
+        let db = Firestore.firestore().collection(AddNewNoteViewModal.path(userID: user?.email, folderId: folder?.folderID))
         db.addSnapshotListener { (snapshot, error) in
             var notes: [Note] = []
             guard let documents = snapshot?.documents else { return }
@@ -32,7 +32,7 @@ struct NotesListViewModal {
     }
     
     func deleteNotes(at index: Int) {
-        let db = Firestore.firestore().collection(AddNewNoteViewModal.path(folderId: folder?.folderID))
+        let db = Firestore.firestore().collection(AddNewNoteViewModal.path(userID: user?.email, folderId: folder?.folderID))
         db.document("\(index)").delete() { error in }
     }
 }

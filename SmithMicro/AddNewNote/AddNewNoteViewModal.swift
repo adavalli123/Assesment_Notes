@@ -20,7 +20,7 @@ struct AddNewNoteViewModal {
     
     func updateOrCreateNew(text: String) {
         guard text.isEmpty == false else { return }
-        let db = Firestore.firestore().collection(AddNewNoteViewModal.path(folderId: folder?.folderID))
+        let db = Firestore.firestore().collection(AddNewNoteViewModal.path(userID: user?.email, folderId: folder?.folderID))
         if wasupdatedFlow == true && createdNewInstance == true {
             db.document("\(index)").updateData([
                 "text": text
@@ -37,16 +37,18 @@ struct AddNewNoteViewModal {
     }
     
     func deletedSelectedNotes() {
-        let folderDatabase = Firestore.firestore().collection(AddNewNoteViewModal.path(folderId: folder?.folderID))
+        let folderDatabase = Firestore.firestore().collection(AddNewNoteViewModal.path(userID: user?.email, folderId: folder?.folderID))
         folderDatabase.document("\(index)").delete() { error in
             guard error == nil else { return }
         }
     }
     
-    static func path(folderId: String?) -> String {
+    static func path(userID:String?, folderId: String?) -> String {
+        let users = "users/"
+        let userID = userID ?? ""
         let folders = "/folders/"
         let folderIndex = folderId ?? ""
         let notes = "/notes"
-        return folders + folderIndex + notes
+        return users + userID + folders + folderIndex + notes
     }
 }
