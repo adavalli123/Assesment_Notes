@@ -31,8 +31,6 @@
 		8DDCA08C2437D7DC000B9ED0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DDCA08B2437D7DC000B9ED0 /* GoogleService-Info.plist */; };
 		8DDCA0932437E8CB000B9ED0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA08E2437E8CA000B9ED0 /* UIView.swift */; };
 		8DDCA0942437E8CB000B9ED0 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA08F2437E8CA000B9ED0 /* UIStackView.swift */; };
-		8DDCA0952437E8CB000B9ED0 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0902437E8CA000B9ED0 /* UIImageView.swift */; };
-		8DDCA0962437E8CB000B9ED0 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0912437E8CA000B9ED0 /* UILabel.swift */; };
 		8DDCA0972437E8CB000B9ED0 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0922437E8CB000B9ED0 /* Collection.swift */; };
 		8DDCA09924381325000B9ED0 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA09824381325000B9ED0 /* NotesListViewController.swift */; };
 		8DDCA09F243818DC000B9ED0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA09E243818DC000B9ED0 /* SignUpViewController.swift */; };
@@ -87,8 +85,6 @@
 		8DDCA08B2437D7DC000B9ED0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8DDCA08E2437E8CA000B9ED0 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8DDCA08F2437E8CA000B9ED0 /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
-		8DDCA0902437E8CA000B9ED0 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		8DDCA0912437E8CA000B9ED0 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		8DDCA0922437E8CB000B9ED0 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		8DDCA09824381325000B9ED0 /* NotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
 		8DDCA09E243818DC000B9ED0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -251,8 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				8DDCA0922437E8CB000B9ED0 /* Collection.swift */,
-				8DDCA0902437E8CA000B9ED0 /* UIImageView.swift */,
-				8DDCA0912437E8CA000B9ED0 /* UILabel.swift */,
 				8DDCA08F2437E8CA000B9ED0 /* UIStackView.swift */,
 				8DDCA08E2437E8CA000B9ED0 /* UIView.swift */,
 				8DDCA0AF243862A7000B9ED0 /* AppDelegate_Firebase.swift */,
@@ -404,7 +398,6 @@
 				8DDCA09924381325000B9ED0 /* NotesListViewController.swift in Sources */,
 				8DDCA0AA24385F4C000B9ED0 /* LoginSignupViewModal.swift in Sources */,
 				8DDCA0942437E8CB000B9ED0 /* UIStackView.swift in Sources */,
-				8DDCA0952437E8CB000B9ED0 /* UIImageView.swift in Sources */,
 				8DDCA09F243818DC000B9ED0 /* SignUpViewController.swift in Sources */,
 				8DDCA0792437D7AF000B9ED0 /* ViewController.swift in Sources */,
 				8DDCA0752437D7AF000B9ED0 /* AppDelegate.swift in Sources */,
@@ -416,7 +409,6 @@
 				8DDCA0AE24386236000B9ED0 /* Note.swift in Sources */,
 				8DDCA0AC243861EA000B9ED0 /* Folder.swift in Sources */,
 				8DDCA07F2437D7AF000B9ED0 /* SmithMicro.xcdatamodeld in Sources */,
-				8DDCA0962437E8CB000B9ED0 /* UILabel.swift in Sources */,
 				8D5B9858243957C200362049 /* FirebaseDecoder.swift in Sources */,
 				8DDCA0772437D7AF000B9ED0 /* SceneDelegate.swift in Sources */,
 			);

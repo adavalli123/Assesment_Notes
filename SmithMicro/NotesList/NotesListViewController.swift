@@ -68,7 +68,7 @@ extension NotesListViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self), for: indexPath)
-        cell.textLabel?.text = viewModal.notes[indexPath.row].text
+        cell.textLabel?.text = viewModal.notes[exist: indexPath.row]?.text
         return cell
     }
     

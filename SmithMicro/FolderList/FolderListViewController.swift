@@ -115,7 +115,7 @@ extension FolderListViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let notesListViewController = NotesListViewController()
         notesListViewController.viewModal.user = viewModal.user
-        notesListViewController.viewModal.folder = viewModal.folders[indexPath.row]
+        notesListViewController.viewModal.folder = viewModal.folders[exist: indexPath.row]
         navigationController?.title = "Notes List"
         self.navigationController?.pushViewController(notesListViewController, animated: true)
     }
