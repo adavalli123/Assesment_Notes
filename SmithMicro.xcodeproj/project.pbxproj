@@ -19,6 +19,8 @@
 		8D5B98A1243AEB5000362049 /* notes list.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B989C243AEB5000362049 /* notes list.png */; };
 		8D5B98A2243AEB5000362049 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B989D243AEB5000362049 /* login.png */; };
 		8D5B98A3243AEB5000362049 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B989E243AEB5000362049 /* folder.png */; };
+		8D5B98A7243AF76C00362049 /* folder level testing.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B98A5243AF76B00362049 /* folder level testing.mov */; };
+		8D5B98A8243AF76C00362049 /* video recording one for logged in saved.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B98A6243AF76C00362049 /* video recording one for logged in saved.mov */; };
 		8DDCA0752437D7AF000B9ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0742437D7AF000B9ED0 /* AppDelegate.swift */; };
 		8DDCA0772437D7AF000B9ED0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0762437D7AF000B9ED0 /* SceneDelegate.swift */; };
 		8DDCA0792437D7AF000B9ED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDCA0782437D7AF000B9ED0 /* ViewController.swift */; };
@@ -71,6 +73,8 @@
 		8D5B989C243AEB5000362049 /* notes list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notes list.png"; sourceTree = "<group>"; };
 		8D5B989D243AEB5000362049 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		8D5B989E243AEB5000362049 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
+		8D5B98A5243AF76B00362049 /* folder level testing.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "folder level testing.mov"; sourceTree = "<group>"; };
+		8D5B98A6243AF76C00362049 /* video recording one for logged in saved.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "video recording one for logged in saved.mov"; sourceTree = "<group>"; };
 		8DDCA0712437D7AF000B9ED0 /* SmithMicro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmithMicro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDCA0742437D7AF000B9ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DDCA0762437D7AF000B9ED0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,9 +198,19 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		8D5B98A4243AF75400362049 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B98A5243AF76B00362049 /* folder level testing.mov */,
+				8D5B98A6243AF76C00362049 /* video recording one for logged in saved.mov */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		8DDCA0682437D7AF000B9ED0 = {
 			isa = PBXGroup;
 			children = (
+				8D5B98A4243AF75400362049 /* Video */,
 				8D5B9899243AEB3B00362049 /* Images */,
 				8DDCA0732437D7AF000B9ED0 /* SmithMicro */,
 				8DDCA0722437D7AF000B9ED0 /* Products */,
@@ -320,7 +334,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B98A1243AEB5000362049 /* notes list.png in Resources */,
+				8D5B98A8243AF76C00362049 /* video recording one for logged in saved.mov in Resources */,
 				8DDCA0842437D7B2000B9ED0 /* LaunchScreen.storyboard in Resources */,
+				8D5B98A7243AF76C00362049 /* folder level testing.mov in Resources */,
 				8D5B98A3243AEB5000362049 /* folder.png in Resources */,
 				8D5B989F243AEB5000362049 /* addnotes.png in Resources */,
 				8DDCA08C2437D7DC000B9ED0 /* GoogleService-Info.plist in Resources */,

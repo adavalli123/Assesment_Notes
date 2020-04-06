@@ -44,7 +44,7 @@ class AddNotesViewController: UIViewController, UIImagePickerControllerDelegate,
         
         let toolbar = UIToolbar(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         toolbar.barStyle = .default
-        toolbar.items = [trashBarButton, spacer, shareButton, spacer, doneBarButton]
+        toolbar.items = [spacer, doneBarButton]
         toolbar.sizeToFit()
         notesTextView.inputAccessoryView = toolbar
     }
